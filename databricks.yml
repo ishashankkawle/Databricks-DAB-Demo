@@ -1,0 +1,28 @@
+bundle:
+  name: DABDemo
+
+# You can also define resources as below
+# ---------------------------------------
+# resources: 
+#   # Resources should be here
+# ---------------------------------------
+# But for this demo, we are including it from other files as below
+include:
+  - src/*.yml
+  - src/env/*.yml
+  - resources/jobs/*.yml
+  - resources/pipelines/*.yml
+  - resources/schemas/*.yml
+
+permissions:
+  # Permissions defined here get applied to entire DAB Project level. 
+  # If you want to define permission on resource level, define it on resources. 
+  # Permissions defined at resource level will override permissions defined here on global level.
+  - user_name: skawle631@gmail.com
+    level: CAN_MANAGE
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace: https://dbc-e8eacbda-17cf.cloud.databricks.com/

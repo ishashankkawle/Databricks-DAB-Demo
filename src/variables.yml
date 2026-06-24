@@ -1,0 +1,5 @@
+variables:
+  catalog:
+    description: This is name of target catalog
+    default: dev_sql
+  

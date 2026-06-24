@@ -1,0 +1,13 @@
+targets:
+  dev:
+    permissions:
+      - user_name: skawle631@gmail.com
+        level: CAN_MANAGE
+
+    presets:
+      # Below setting will as common prefix in-front of all asset names that are going to get generated.
+      name_prefix: (dev ${workspace.current_user.short_name})
+      # As of now, we are directly referring files and folders from repo.
+      # But we want to create a separate folder as a package and want to refer files from there
+      # Below setting will stop directly using repo folders and will create .bundle folder as a build package
+      source_linked_deployment: false  
